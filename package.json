@@ -13,6 +13,7 @@
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "node dist/main.js",
+    "prestart:prod": "rimraf dist && tsc",
     "start:dev": "nest start --watch",
     "postinstall": "npm run prestart:prod",
     "start:debug": "nest start --debug --watch",
